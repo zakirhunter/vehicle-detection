@@ -14,52 +14,6 @@
 
 ---
 
-### Code & Files
-
-#### 1. My project includes the following files
-
-* [main.py](main.py) is the main code for demos
-* [svm_pipeline.py](svm_pipeline.py) is the car detection pipeline with SVM
-* [yolo_pipeline.py](yolo_pipeline.py) is the car detection pipeline with a deep net [YOLO (You Only Look Once)](https://arxiv.org/pdf/1506.02640.pdf)
-* [visualization.py](visualizations.py) is the function for adding visalization
-
----
-Others are the same as in the repository of [Lane Departure Warning System](https://github.com/JunshengFu/autonomous-driving-lane-departure-warning):
-* [calibration.py](calibration.py) contains the script to calibrate camera and save the calibration results
-* [lane.py](model.h5) contains the lane class 
-* [examples](examples) folder contains the sample images and videos
-
-
-#### 2. Dependencies & my environment
-
-Anaconda is used for managing my [**dependencies**](https://github.com/udacity/CarND-Term1-Starter-Kit).
-* You can use provided [environment-gpu.yml](environment-gpu.yml) to install the dependencies.
-* OpenCV3, Python3.5, tensorflow, CUDA8  
-* OS: Ubuntu 16.04
-
-#### 3. How to run the code
-
-(1) Download weights for YOLO
-
-You can download the weight from [here](https://drive.google.com/open?id=0B5WIzrIVeL0WS3N2VklTVmstelE) and save it to
-the [weights](weights) folder.
-
-(2) If you want to run the demo, you can simply run:
-```sh
-python main.py
-```
-
-#### 4. Release History
-
-* 0.1.1
-    * Fix two minor bugs and update the documents
-    * Date 18 April 2017
-
-* 0.1.0
-    * The first proper release
-    * Date 31 March 2017
-
----
 
 ### **Two approaches: Linear SVM vs Neural Network**
 
