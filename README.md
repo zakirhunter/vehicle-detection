@@ -5,12 +5,12 @@
 #### A demo of Vehicle Detection System: a monocular camera is used for detecting vehicles. 
 
 
-#### [**(1) Highway Drive (with Lane Departure Warning)**](https://youtu.be/Brh9-uab7Qs) (Click to see the full video)
+#### [**(1) Highway Drive (with Lane Departure Warning)**](https://youtu.be/) (Click to see the full video)
 
-[![gif_demo1][demo1_gif]](https://youtu.be/Brh9-uab7Qs)
+[![gif_demo1][demo1_gif]](https://youtu.be)
 
-#### [**(2) City Drive (Vehicle Detection only)**](https://youtu.be/2wOxK86LcaM) (Click to see the full video)
-[![gif_demo2][demo2_gif]](https://youtu.be/2wOxK86LcaM)
+#### [**(2) City Drive (Vehicle Detection only)**](https://youtu.be/) (Click to see the full video)
+[![gif_demo2][demo2_gif]](https://youtu.be/)
 
 ---
 
@@ -149,15 +149,3 @@ Since the "car" is known to YOLO, I use the precomputed weights directly and app
 ![alt text][image8]
 
 ---
-
-### Discussion
-For the SVM based approach, the accuray is good, but the speed (2 fps) is an problem due to the fact of sliding window approach 
-is time consuming! We could use image downsampling, multi-threads, or GPU processing to improve the speed. But, there are probably
-a lot engineering work need to be done to make it running real-time. Also, in this application, I limit the vertical searching 
-range to control the number of searching windows, as well as avoid some false positives (e.g. cars on the tree).
-
-For YOLO based approach, it achieves real-time and the accuracy are quite satisfactory. Only in some cases, it may failure to
- detect the small car thumbnail in distance. My intuition is that the original input image is in resolution of 1280x720, and it needs to be downscaled
- to 448x448, so the car in distance will be tiny and probably quite distorted in the downscaled image (448x448). In order to 
- correctly identify the car in distance, we might need to either crop the image instead of directly downscaling it, or retrain 
- the network.
